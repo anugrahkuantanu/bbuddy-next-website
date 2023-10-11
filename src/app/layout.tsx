@@ -5,11 +5,12 @@ import { Lexend } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { Provider } from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/Footer";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Learning Journey",
+  title: "bbuddy.ai",
 };
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Toaster />
+          <Footer />
         </Provider>
       </body>
     </html>
