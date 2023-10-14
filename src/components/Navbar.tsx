@@ -20,8 +20,8 @@ const Navbar = async (props: Props) => {
         </Link> */}
         <MyLogo />
         <div className="flex items-center">
-          <Link href="/gallery" className="mr-3">
-            Gallery
+          <Link href="/" className="mr-3">
+            Home
           </Link>
           {session?.user && (
             <>
@@ -34,13 +34,13 @@ const Navbar = async (props: Props) => {
             </>
           )}
           <ThemeToggle className="mr-3" />
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             {session?.user ? (
               <UserAccountNav user={session.user} />
             ) : (
               <SignInButton />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import { Provider } from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -20,13 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(lexend.className, "antialiased min-h-screen pt-16 w-11/12 max-w-[1200px] mx-auto md:h-full")}>
+      <body className={cn(lexend.className, "antialiased min-h-screen")}>
+      <MaxWidthWrapper className='mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center'>
         <Provider>
           <Navbar />
           {children}
           <Toaster />
           <Footer />
         </Provider>
+        </MaxWidthWrapper>
       </body>
     </html>
   );
