@@ -8,8 +8,8 @@ const Home = () => {
     <section id="home">
 
       <div className="md:items-center md:h-full py-2.5">
-        <h1 className='font-playfair text-2xl font-bold text-center mt-72 '>Bbuddy</h1>
-        <p className="mt-5 mb-3 text-sm md:text-xl text-center md:text-justify font-playfair">
+        <h1 className='text-2xl font-bold text-center md:mt-72 mt-32 '>Bbuddy</h1>
+        <p className="mt-5 mb-3 text-sm md:text-xl text-center md:text-justify ">
             Welcome to our transformative app, carefully crafted to enhance your understanding of your emotions and thoughts. 
             Powered by cutting-edge Al technology, our platform provides invaluable guidance and support tailored specifically to your needs, 
             enabling you to confidently navigate life's challenges and enhance your mental well-being</p>
