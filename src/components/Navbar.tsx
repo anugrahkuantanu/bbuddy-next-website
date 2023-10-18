@@ -23,7 +23,7 @@ const Navbar = async (props: Props) => {
           <Link href="/" className="mr-3">
             Home
           </Link>
-          {session?.user && (
+          {/* {session?.user && (
             <>
               <Link href="/create" className="mr-3">
                 Create Course
@@ -32,7 +32,7 @@ const Navbar = async (props: Props) => {
                 Settings
               </Link>
             </>
-          )}
+          )} */}
           <ThemeToggle className="mr-3" />
           {/* <div className="flex items-center">
             {session?.user ? (
