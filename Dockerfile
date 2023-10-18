@@ -7,7 +7,11 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+
+#COPY ./bbuddy-next-website/package.json /package.json
+COPY ./bbuddy-next-website/package*.json ./
+COPY ./bbuddy-next-website/yarn.lock*  ./
+
 RUN \
     if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
     elif [ -f package-lock.json ]; then npm ci; \
@@ -15,12 +19,14 @@ RUN \
     else echo "Lockfile not found." && exit 1; \
     fi
 
+#RUN yarn install
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+COPY ./bbuddy-next-website .
+
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
