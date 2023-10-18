@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
       {/* FORM & IMAGE */}
       <div className="md:flex md:justify-between gap-16 mt-5">
         <div className="basis-1/3 justify-center">
-          <p className="font-playfair font-semibold text-4xl text-blue mb-10">
+          <p className=" font-semibold text-4xl text-blue mb-10">
           CONTACT US
           </p>
           <div className="hidden md:block">
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             method="POST"
           >
             <input
-              className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 rounded-[10px] font-playfair"
+              className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 rounded-[10px] "
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             )}
 
             <input
-              className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 mt-5 rounded-[10px] font-playfair"
+              className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 mt-5 rounded-[10px] "
               type="text"
               placeholder="EMAIL"
               {...register("email", {
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
             )}
 
             <textarea
-              className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 mt-5 rounded-[10px] font-playfair"
+              className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 mt-5 rounded-[10px] "
               placeholder="MESSAGE"
               rows={4}
               cols={50}
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
             )}
 
             <button
-              className="p-5 bg-tael font-semibold dark:text-white mt-5 hover:bg-red hover:text-deep-blue transition duration-500 rounded-[10px] font-playfair"
+              className="p-5 bg-tael font-semibold dark:text-white mt-5 hover:bg-red hover:text-deep-blue transition duration-500 rounded-[10px] "
               type="submit"
             >
               SEND US A MESSAGE
