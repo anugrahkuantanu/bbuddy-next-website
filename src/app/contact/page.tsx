@@ -2,23 +2,22 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import SocialMediaIcons from "../../components/ui/SocialMediaIcons";
 
-interface IFormInput {
-  name: string;
-  email: string;
-  message: string;
-}
 
-const Contact: React.FC = () => {
+const Contact = () => {
   const {
     register,
     trigger,
-    handleSubmit,
     formState: { errors },
-  } = useForm<IFormInput>();
+  } = useForm();
 
-  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    console.log(data);
+  const onSubmit = async (e: any) => {
+    console.log("~ e", e);
+    const isValid = await trigger();
+    if (!isValid) {
+      e.preventDefault();
+    }
   };
+
 
   return (
     <section id="contact" className="contact md:py-48 py-4 h-[calc(100vh-160px)]">
@@ -38,8 +37,8 @@ const Contact: React.FC = () => {
         <div className="basis-2/3 mt-10 md:mt-0">
           <form
             target="_blank"
-            onSubmit={handleSubmit(onSubmit)}
-            action="https://formsubmit.co/info@bbuddy.ai"
+            onSubmit={onSubmit}
+            action="https://formsubmit.co/anugrahkuantanu@gmail.com"
             method="POST"
           >
             <input
