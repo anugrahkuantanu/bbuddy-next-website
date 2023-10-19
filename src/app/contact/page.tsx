@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="contact py-48 h-[calc(100vh-160px)]">
+    <section id="contact" className="contact md:py-48 py-4 h-[calc(100vh-160px)]">
 
       {/* FORM & IMAGE */}
       <div className="md:flex md:justify-between gap-16 mt-5">
@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
             <input
               className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 rounded-[10px] "
               type="text"
-              placeholder="NAME"
+              placeholder="Name"
               {...register("name", {
                 required: true,
                 maxLength: 100,
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
             <input
               className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 mt-5 rounded-[10px] "
               type="text"
-              placeholder="EMAIL"
+              placeholder="Email"
               {...register("email", {
                 required: true,
                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
 
             <textarea
               className="w-full dark:bg-white bg-gray-700 dark:text-black text-white font-semibold placeholder-opaque-black p-3 mt-5 rounded-[10px] "
-              placeholder="MESSAGE"
+              placeholder="Message"
               rows={4}
               cols={50}
               {...register("message", {

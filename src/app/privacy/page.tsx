@@ -3,7 +3,7 @@
 type Props = {}
 const PrivacyPolicyPage = (props: Props) => {
   return (
-    <section id="privacy" className="pt-48 pb-48">
+    <section id="privacy" className=" pt-0 pb-16">
       {/* HEADINGS */}
       <div>
         <div>
