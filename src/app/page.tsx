@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image'; // Use Next.js's Image component for optimized image handling
-import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 
 
 const Home = () => {
