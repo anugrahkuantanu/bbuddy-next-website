@@ -13,10 +13,10 @@ const Home = () => {
             Powered by cutting-edge Al technology, our platform provides invaluable guidance and support tailored specifically to your needs, 
             enabling you to confidently navigate life's challenges and enhance your mental well-being</p>
           <div className='flex items-center md:flex-row flex-column justify-center md:mt-10 mt-6 space-x-2.5'>
-          <a href="/soon">
+          <a href="https://testflight.apple.com/join/Vaypz63T">
             <Image src='/assets/apple.svg' alt="App Store" width={129} height={42} />
           </a>
-          <a href="/soon">
+          <a href="https://play.google.com/store/apps/details?id=com.bbuddy.bbuddycoaching">
             <Image src='/assets/google.svg' alt="Google Play" width={144} height={43} />
           </a>
         </div>
